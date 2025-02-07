@@ -12,6 +12,8 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 :root{
     --txt-clr: black;
@@ -24,7 +26,7 @@ body{
 
 /* Header */
 .header{
-    width: 100%;
+    width: 100vw;
     height: 4rem;
     position: fixed;
     display: flex;
@@ -95,6 +97,7 @@ body{
     z-index: 1001;
     display: none;
     transition: 0.5s ease;
+    overflow-x: hidden;
 }
 .menu-icon:hover{
     color: var(--bg-clr);
@@ -126,9 +129,6 @@ body{
     padding-left: 2rem;
     list-style: none;
 }
-.nav-bar ul li:hover{
-    background-color: var(--bg2-clr);
-}
 .nav-bar ul li a{
     text-decoration: none;
     color: var(--bg-clr);
@@ -139,6 +139,12 @@ body{
     color: var(--main-clr);
     transition: 0.5s ease;
     text-shadow: 0 0 10px var(--bg-clr);
+}
+
+/* Making Section Overflow-X Hidden */
+section{
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* Home Section */
@@ -657,6 +663,7 @@ body{
     font-family: var(--txt-font);
     cursor: pointer;
     transition: 0.5s ease;
+    margin-bottom: 2rem;
 }
 .contact-form #submit:hover{
     background-color: rgb(114, 164, 255);
@@ -668,10 +675,10 @@ body{
     opacity: 0.4;
 }
 
-/* Become On Expert */
+/* Become On SMSRam */
 .become-expert{
     width: 100%;
-    height: 40vh;
+    min-height: 40vh;
     background-color: var(--bg2-clr);
 }
 .become-expert-container{
@@ -699,6 +706,7 @@ body{
     color: var(--bg-clr);
     cursor: pointer;
     transition: 0.5s ease;
+    margin-bottom: 2rem;
 }
 .become-expert-container div:hover{
     background-color: rgb(114, 164, 255);
@@ -754,7 +762,11 @@ body{
     color: var(--main-clr);
     cursor: pointer;
 }
+.footer-container2 p{
+    text-align: center;
+}
 
+/* Responseive */
 @media(max-width: 938px){
     .projects-container .projects-box div{
         max-width: 36rem;
